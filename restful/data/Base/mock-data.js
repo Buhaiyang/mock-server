@@ -1,11 +1,199 @@
 module.exports = {
-  "GET:/app": {
-    "id": "test",
-    "description": "this is a test!"
+  "POST:/Users/login": (req, res)=>{
+    const { email, password } = req.body;
+    if(email === '1035833455@qq.com' && password === '123456'){
+      res.status(200).send({
+        "position":{
+          "id":378,
+          "name":"admin",
+          "description":"管理员",
+          "company_id":89
+        },
+        "user":{
+          "id":485,
+          "username":"admin",
+          "email":"1035833455@qq.com",
+          "companyId":null,
+          "password":"$2b$10$2NfDa0lQpz/TpxIa0.FdNupK3b186paqJu16Y8iCTQZ5DHZI1/Kk6",
+          "positionId":null,
+          "team_id":null,
+          "registration_date":null,
+          "realm":null,
+          "emailVerified":0,
+          "verificationToken":null,
+          "company_id":{
+            "id":89,
+            "name":"海洋测试",
+            "remark":null,
+            "type":"销冠demo",
+            "create_timestamp":null,
+            "status":1
+          },
+          "position_id":{
+            "id":378,
+            "name":"admin",
+            "description":"管理员",
+            "company_id":89
+          }
+        },
+        "ttl":1209600,
+        "userId":485,
+        "company":{
+          "id":89,
+          "name":"海洋测试",
+          "remark":null,
+          "type":"销冠demo",
+          "create_timestamp":null,
+          "status":1
+        },
+        "id":"UrHvKjhHjYq9Bb5BFD0ZMQ61tLofRHfPa2pAAjShJksi8mLqobCH7R8nbMwcgGwj"
+      });
+    } else {
+      res.status(500).send('err');
+    }
   },
-  "POST:/app": (req, res)=>{
+  "GET:/User": {
+    "count":1,
+    "result":[
+      {
+        "id":485,
+        "username":"admin",
+        "email":"1035833455@qq.com",
+        "companyId":null,
+        "password":"$2b$10$2NfDa0lQpz/TpxIa0.FdNupK3b186paqJu16Y8iCTQZ5DHZI1/Kk6",
+        "positionId":null,
+        "team_id":null,
+        "registration_date":null,
+        "realm":null,
+        "emailVerified":0,
+        "verificationToken":null,
+        "company_id":{
+          "id":89,
+          "name":"海洋测试",
+          "remark":null,
+          "type":"销冠demo",
+          "create_timestamp":null,
+          "status":1
+        },
+        "position_id":{
+          "id":378,
+          "name":"admin",
+          "description":"管理员",
+          "company_id":89
+        }
+      }
+    ]
+  },
+  "GET:/GetPosition": [
+    {
+      "id":373,
+      "name":"manager",
+      "description":"质检主管",
+      "company_id":89
+    },
+    {
+      "id":374,
+      "name":"qa",
+      "description":"质检专员",
+      "company_id":89
+    },
+    {
+      "id":375,
+      "name":"salesman",
+      "description":"坐席",
+      "company_id":89
+    },
+    {
+      "id":376,
+      "name":"sales-manager",
+      "description":"销售主管",
+      "company_id":89
+    },
+    {
+      "id":377,
+      "name":"sales-majordomo",
+      "description":"销售总监",
+      "company_id":89
+    }
+  ],
+  "POST:/Users/change-password": (req, res)=>{
     res.status(201).send('success');
   },
+  "GET:/KnowledgeGroups": [
+    {
+      "id":37,
+      "company_id":89,
+      "title":"A",
+      "description":"description",
+      "count":1
+    },
+    {
+      "id":38,
+      "company_id":89,
+      "title":"B",
+      "description":"des",
+      "count":null
+    }
+  ],
+  "GET:/GroupedKnowledges": {
+    "id":37,
+    "company_id":89,
+    "title":"A",
+    "description":"description",
+    "group_knowledges":[]
+  },
+  "GET:/KnowledgeTagGroups": [
+    {
+      "id":17,
+      "company_id":89,
+      "title":"admin",
+      "knowledgetaggroup_tag":[]
+    },
+    {
+      "id":18,
+      "company_id":89,
+      "title":"6666",
+      "knowledgetaggroup_tag":[]
+    }
+  ],
+  "GET:/StageConfigs": [
+    {
+      "in_use":1,
+      "ideas":[
+        {
+          "id":174,
+          "name":"1",
+          "config_id":1492,
+          "type":"idea",
+          "order":1,
+          "parent_id":173,
+          "in_use":1,
+          "comment":"12"
+        }
+      ],
+      "order":1,
+      "id":173,
+      "name":"11"
+    },
+    {
+      "in_use":1,
+      "ideas":[
+        {
+          "id":176,
+          "name":"343",
+          "config_id":1493,
+          "type":"idea",
+          "order":1,
+          "parent_id":175,
+          "in_use":1,
+          "comment":"343434"
+        }
+      ],
+      "order":2,
+      "id":175,
+      "name":"2343"
+    }
+  ],
   "PUT:/app/:id": (req, res)=>{
     res.send('ok');
   },
