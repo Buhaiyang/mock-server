@@ -4,12 +4,13 @@
   "description": "static-server",
   "main": "index.js",
   "scripts": {
-    "restful": "node restful/server.js",
-    "socket": "node socket/server.js"
+    "restful": "nodemon restful/server.js",
+    "socket": "nodemon socket/server.js"
   },
   "author": "buhaiyang",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^0.14.0"
+    "json-server": "^0.14.0",
+    "nodemon": "^1.18.4"
   }
 }

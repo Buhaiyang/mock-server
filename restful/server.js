@@ -29,9 +29,11 @@ const start = (mockData)=>{
         method = 'get';
       }
       count ++;
-      server[method](`${prefix}${route}`, (req, res) => {
-        const reqUrl = `${req.method}:${req.url.replace(prefix,'')}`;
-        console.log(reqUrl);
+      if (route.split('/')[1] !== 'sales_ai_coach') {
+        route = `${prefix}${route}`;
+      }
+      server[method](route, (req, res) => {
+        console.log(req.method, ':', req.url);
         const result = data[registerUrl];
         if(typeof result ==='object'){
           res.jsonp(result);
