@@ -449,10 +449,273 @@ module.exports = {
     "sales_question_num": 8,
     "conversion_rate": 49
   },
-  "PUT:/sales_ai_coach/v20180814/api/app/:id": (req, res)=>{
-    res.send('ok');
+  "GET:/sales_ai_coach/v20180814/api/keyword_group_list": {
+    "count": 12,
+    "data": [
+      {
+        "id": 0,
+        "speaker": 0,
+        "in_use": 0,
+        "group_name": "敏感词组1",
+        "comment": "一段备注",
+        "keyword": [
+          {
+            "word": "敏感词001",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          },
+          {
+            "word": "敏感词002",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "speaker": 1,
+        "in_use": 1,
+        "group_name": "敏感词组2",
+        "comment": "一段备注0",
+        "keyword": [
+          {
+            "word": "00敏感词001",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          },
+          {
+            "word": "00敏感词002",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "speaker": 0,
+        "in_use": 0,
+        "group_name": "敏感词组1",
+        "comment": "一段备注",
+        "keyword": [
+          {
+            "word": "敏感词001",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          },
+          {
+            "word": "敏感词002",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "speaker": 1,
+        "in_use": 1,
+        "group_name": "敏感词组2",
+        "comment": "一段备注0",
+        "keyword": [
+          {
+            "word": "00敏感词001",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          },
+          {
+            "word": "00敏感词002",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "speaker": 0,
+        "in_use": 0,
+        "group_name": "敏感词组1",
+        "comment": "一段备注",
+        "keyword": [
+          {
+            "word": "敏感词001",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          },
+          {
+            "word": "敏感词002",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "speaker": 1,
+        "in_use": 1,
+        "group_name": "敏感词组2",
+        "comment": "一段备注0",
+        "keyword": [
+          {
+            "word": "00敏感词001",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          },
+          {
+            "word": "00敏感词002",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "speaker": 0,
+        "in_use": 0,
+        "group_name": "敏感词组1",
+        "comment": "一段备注",
+        "keyword": [
+          {
+            "word": "敏感词001",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          },
+          {
+            "word": "敏感词002",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "speaker": 1,
+        "in_use": 1,
+        "group_name": "敏感词组2",
+        "comment": "一段备注0",
+        "keyword": [
+          {
+            "word": "00敏感词001",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          },
+          {
+            "word": "00敏感词002",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "speaker": 0,
+        "in_use": 0,
+        "group_name": "敏感词组1",
+        "comment": "一段备注",
+        "keyword": [
+          {
+            "word": "敏感词001",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          },
+          {
+            "word": "敏感词002",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "speaker": 1,
+        "in_use": 1,
+        "group_name": "敏感词组2",
+        "comment": "一段备注0",
+        "keyword": [
+          {
+            "word": "00敏感词001",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          },
+          {
+            "word": "00敏感词002",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "speaker": 0,
+        "in_use": 0,
+        "group_name": "敏感词组1",
+        "comment": "一段备注",
+        "keyword": [
+          {
+            "word": "敏感词001",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          },
+          {
+            "word": "敏感词002",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "speaker": 1,
+        "in_use": 1,
+        "group_name": "敏感词组2",
+        "comment": "一段备注0",
+        "keyword": [
+          {
+            "word": "00敏感词001",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          },
+          {
+            "word": "00敏感词002",
+            "type": "string",
+            "keyword_group_id": 0,
+            "company_id": 0
+          }
+        ]
+      }
+    ]
   },
-  "DELETE:/sales_ai_coach/v20180814/api/app": (req, res)=>{
+  "POST:/sales_ai_coach/v20180814/api/keyword_group": (req, res)=>{
+    res.status(201).send('ok');
+  },
+  "PUT:/sales_ai_coach/v20180814/api/keyword_group/:id": (req, res)=>{
+    res.status(201).send('ok');
+  },
+  "DELETE:/sales_ai_coach/v20180814/api/keyword_group/:id": (req, res)=>{
     res.status(204).send('success');
+  },
+  "PUT:/sales_ai_coach/v20180814/api/keyword_group/change_use/:id": (req, res)=>{
+    res.status(201).send('ok');
   },
 }
