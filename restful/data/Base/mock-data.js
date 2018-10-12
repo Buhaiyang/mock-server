@@ -247,7 +247,7 @@ module.exports = {
       {
         "conversation_id": 0,
         "called_no": "18802419208",
-        "user_name": "客户",
+        "user_name": "销售11",
         "last_call_duration_ms": 2,
         "last_call_create_timestamp": 2014,
         "count": 9
@@ -263,7 +263,7 @@ module.exports = {
       {
         "conversation_id": "343t56sdfgf",
         "called_no": "18802419208",
-        "user_name": "客户",
+        "user_name": "销售11",
         "last_call_duration_ms": 2,
         "last_call_create_timestamp": 2014,
         "count": 9
@@ -279,7 +279,7 @@ module.exports = {
       {
         "conversation_id": "343sdft56fgf",
         "called_no": "18802419208",
-        "user_name": "客户",
+        "user_name": "销售11",
         "last_call_duration_ms": 2,
         "last_call_create_timestamp": 2014,
         "count": 9
@@ -319,7 +319,7 @@ module.exports = {
       {
         "conversation_id": "898343t56fgf",
         "called_no": "18802419208",
-        "user_name": "客户",
+        "user_name": "销售11",
         "last_call_duration_ms": 2,
         "last_call_create_timestamp": 2014,
         "count": 9
@@ -419,7 +419,7 @@ module.exports = {
       {
         "sentence_id": 4,
         "title": "sales_talk_proportion",
-        "content": "53"
+        "content": "0.23"
       },
       {
         "sentence_id": 4,
@@ -442,7 +442,7 @@ module.exports = {
   ],
   "GET:/sales_ai_coach/v20180814/api/conversation/expression_specification_avg/tem2": {
     "sales_nonsense_word_rate": 5,
-    "sales_talk_proportion": 80,
+    "sales_talk_proportion": 0.8,
     "total_break_customer": 11,
     "sales_speed": 99,
     "customer_question_num": 3,
@@ -709,6 +709,27 @@ module.exports = {
   "POST:/sales_ai_coach/v20180814/api/keyword_group": (req, res)=>{
     res.status(201).send('ok');
   },
+  "GET:/sales_ai_coach/v20180814/api/keyword_group/:id": {
+    "id": 9,
+    "speaker": 1,
+    "in_use": 1,
+    "group_name": "敏感词组2",
+    "comment": "一段备注0",
+    "keyword": [
+      {
+        "word": "00敏感词001",
+        "type": "string",
+        "keyword_group_id": 0,
+        "company_id": 0
+      },
+      {
+        "word": "00敏感词002",
+        "type": "string",
+        "keyword_group_id": 0,
+        "company_id": 0
+      }
+    ]
+  },
   "PUT:/sales_ai_coach/v20180814/api/keyword_group/:id": (req, res)=>{
     res.status(201).send('ok');
   },
@@ -718,4 +739,131 @@ module.exports = {
   "PUT:/sales_ai_coach/v20180814/api/keyword_group/change_use/:id": (req, res)=>{
     res.status(201).send('ok');
   },
+  "GET:/sales_ai_coach/v20180814/api/get_keyword_event_list": {
+    "count": 12,
+    "data": [
+      {
+        "conversation_id": 0,
+        "called_no": "18802419208",
+        "user_name": "客户",
+        "duration_ms": 2,
+        "create_timestamp": 201434334,
+        "keyword": "敏感词0",
+        "speaker": 0
+      },
+      {
+        "conversation_id": 1,
+        "called_no": "18802419208",
+        "user_name": "客户",
+        "duration_ms": 23445,
+        "create_timestamp": 201434334,
+        "keyword": "敏感词1",
+        "speaker": 1
+      },
+      {
+        "conversation_id": "343t56sdfgf",
+        "called_no": "18802419208",
+        "user_name": "客户",
+        "duration_ms": 12,
+        "create_timestamp": 2012322434334,
+        "keyword": "敏感词2",
+        "speaker": 0
+      },
+      {
+        "conversation_id": "sd343t56fgf",
+        "called_no": "18802419208",
+        "user_name": "客户",
+        "duration_ms": 78,
+        "create_timestamp": 201434334,
+        "keyword": "敏感词3",
+        "speaker": 1
+      },
+      {
+        "conversation_id": "343sdft56fgf",
+        "called_no": "18802419208",
+        "user_name": "客户",
+        "duration_ms": 442,
+        "create_timestamp": 201434444334,
+        "keyword": "敏感词4",
+        "speaker": 0
+      },
+      {
+        "conversation_id": "3435343t56fgf",
+        "called_no": "18802419208",
+        "user_name": "客户",
+        "duration_ms": 2554,
+        "create_timestamp": 1120221434334,
+        "keyword": "敏感词5",
+        "speaker": 1
+      },
+      {
+        "conversation_id": "545343t56fgf",
+        "called_no": "18802419208",
+        "user_name": "客户",
+        "duration_ms": 6566,
+        "create_timestamp": 2014312124334,
+        "keyword": "敏感词6",
+        "speaker": 0
+      },
+      {
+        "conversation_id": "34563t56fgf",
+        "called_no": "18802419208",
+        "user_name": "客户",
+        "duration_ms": 2,
+        "create_timestamp": 20222221434334,
+        "keyword": "敏感词7",
+        "speaker": 1
+      },
+      {
+        "conversation_id": "455634356t56fgf",
+        "called_no": "18802419208",
+        "user_name": "客户",
+        "duration_ms": 2,
+        "create_timestamp": 20788881434334,
+        "keyword": "敏感词8",
+        "speaker": 0
+      },
+      {
+        "conversation_id": "898343t56fgf",
+        "called_no": "18802419208",
+        "user_name": "客户",
+        "duration_ms": 299999,
+        "create_timestamp": 202221434334,
+        "keyword": "敏感词9",
+        "speaker": 1
+      },
+      {
+        "conversation_id": "398943t56fgf",
+        "called_no": "18802419208",
+        "user_name": "客户",
+        "duration_ms": 243,
+        "create_timestamp": 20232321434334,
+        "keyword": "敏感词10",
+        "speaker": 0
+      },
+      {
+        "conversation_id": "34944563t56fgf",
+        "called_no": "18802419208",
+        "user_name": "客户",
+        "duration_ms": 2232,
+        "create_timestamp": 2014454534334,
+        "keyword": "敏感词11",
+        "speaker": 1
+      }
+    ]
+  },
+  "GET:/sales_ai_coach/v20180814/api/keyword_list": [
+    {
+      "word": "敏感词01",
+      "id": 123
+    },
+    {
+      "word": "敏感词02",
+      "id": 456
+    },
+    {
+      "word": "敏感词03",
+      "id": 789
+    },
+  ],
 }

@@ -29,9 +29,9 @@ const start = (mockData)=>{
         method = 'get';
       }
       count ++;
-      // if (route.split('/')[1] !== 'sales_ai_coach') {
-      //   route = `${prefix}${route}`;
-      // }
+      if (route.split('/')[1] !== 'sales_ai_coach') {
+        route = `${prefix}${route}`;
+      }
       server[method](route, (req, res) => {
         console.log(req.method, ':', req.url);
         const result = data[registerUrl];
