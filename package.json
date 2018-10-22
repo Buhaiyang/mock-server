@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "restful": "nodemon restful/server.js",
-    "socket": "nodemon socket/server.js"
+    "ws": "nodemon webSocket/server.js"
   },
   "author": "buhaiyang",
   "license": "ISC",
   "dependencies": {
+    "http": "0.0.0",
     "json-server": "^0.14.0",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "ws": "^6.1.0"
   }
 }

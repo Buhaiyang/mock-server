@@ -95,6 +95,100 @@ module.exports = {
           }
         }
       });
+    } else if (email === 'salesman@qq.com' && password === '123456') {
+      res.status(200).send({
+        "userId":486,
+        "ttl":1209600,
+        "id":"48AeklkPT5tuS4Sp2fyEDJ86iirKD4pcPdRgqTJIaeiYd3h2spPaf7WoHKMJVuo4",
+        "company":{
+          "id":89,
+          "name":"海洋测试",
+          "remark":null,
+          "type":"销冠demo",
+          "create_timestamp":null,
+          "status":1
+        },
+        "position":{
+          "id":376,
+          "name":"salesman",
+          "description":"销售",
+          "company_id":89
+        },
+        "user":{
+          "id":486,
+          "username":"销售",
+          "email":"salesman@qq.com",
+          "companyId":null,
+          "password":"$2b$10$a000paTxIjMF8VC5dwM.eOXV2Bpx5eCtOFjvic.OXt3nNQYvlOPNW",
+          "positionId":null,
+          "team_id":44,
+          "registration_date":1537947226,
+          "realm": "销冠demo",
+          "emailVerified":0,
+          "verificationToken":null,
+          "company_id":{
+            "id":89,
+            "name":"海洋测试",
+            "remark":null,
+            "type":"销冠demo",
+            "create_timestamp":null,
+            "status":1
+          },
+          "position_id":{
+            "id":376,
+            "name":"salesman",
+            "description":"销售",
+            "company_id":89
+          }
+        }
+      });
+    } else if (email === 'majordomo@qq.com' && password === '123456') {
+      res.status(200).send({
+        "userId":486,
+        "ttl":1209600,
+        "id":"48AeklkPT5tuS4Sp2fyEDJ86iirKD4pcPdRgqTJIaeiYd3h2spPaf7WoHKMJVuo4",
+        "company":{
+          "id":89,
+          "name":"海洋测试",
+          "remark":null,
+          "type":"销冠demo",
+          "create_timestamp":null,
+          "status":1
+        },
+        "position":{
+          "id":376,
+          "name":"sales-majordomo",
+          "description":"总监",
+          "company_id":89
+        },
+        "user":{
+          "id":486,
+          "username":"总监",
+          "email":"majordomo@qq.com",
+          "companyId":null,
+          "password":"$2b$10$a000paTxIjMF8VC5dwM.eOXV2Bpx5eCtOFjvic.OXt3nNQYvlOPNW",
+          "positionId":null,
+          "team_id":44,
+          "registration_date":1537947226,
+          "realm": "销冠demo",
+          "emailVerified":0,
+          "verificationToken":null,
+          "company_id":{
+            "id":89,
+            "name":"海洋测试",
+            "remark":null,
+            "type":"销冠demo",
+            "create_timestamp":null,
+            "status":1
+          },
+          "position_id":{
+            "id":376,
+            "name":"sales-majordomo",
+            "description":"总监",
+            "company_id":89
+          }
+        }
+      });
     } else {
       res.status(500).send('err');
     }
@@ -385,6 +479,7 @@ module.exports = {
         "text": "string1"
       },
     ],
+    "flag": true,
     "events": [
       {
         "sentence_id": 0,
@@ -409,7 +504,7 @@ module.exports = {
       {
         "sentence_id": 2,
         "title": "sales_speed",
-        "content": "88"
+        "content": "2"
       },
       {
         "sentence_id": 3,
@@ -425,6 +520,26 @@ module.exports = {
         "sentence_id": 4,
         "title": "sales_nonsense_word_rate",
         "content": "1"
+      },
+      {
+        "sentence_id": 4,
+        "title": "user_profile_demand",
+        "content": 80
+      },
+      {
+        "sentence_id": 4,
+        "title": "user_profile_name",
+        "content": "客户"
+      },
+      {
+        "sentence_id": 4,
+        "title": "user_profile_phone_number",
+        "content": "18888888888"
+      },
+      {
+        "sentence_id": 4,
+        "title": "user_profile_business_type",
+        "content": "232"
       },
     ]
   },
@@ -444,7 +559,7 @@ module.exports = {
     "sales_nonsense_word_rate": 5,
     "sales_talk_proportion": 0.8,
     "total_break_customer": 11,
-    "sales_speed": 99,
+    "sales_speed": 1,
     "customer_question_num": 3,
     "sales_question_num": 8,
     "conversion_rate": 49
@@ -706,7 +821,7 @@ module.exports = {
       }
     ]
   },
-  "POST:/sales_ai_coach/v20180814/api/keyword_group": (req, res)=>{
+  "POST:/sales_ai_coach/v20180814/api/keyword_group/create": (req, res)=>{
     res.status(201).send('ok');
   },
   "GET:/sales_ai_coach/v20180814/api/keyword_group/:id": {
@@ -717,12 +832,14 @@ module.exports = {
     "comment": "一段备注0",
     "keyword": [
       {
+        "id": 0,
         "word": "00敏感词001",
         "type": "string",
         "keyword_group_id": 0,
         "company_id": 0
       },
       {
+        "id": 2,
         "word": "00敏感词002",
         "type": "string",
         "keyword_group_id": 0,
@@ -730,13 +847,13 @@ module.exports = {
       }
     ]
   },
-  "PUT:/sales_ai_coach/v20180814/api/keyword_group/:id": (req, res)=>{
+  "POST:/sales_ai_coach/v20180814/api/keyword_group/:id/change": (req, res)=>{
     res.status(201).send('ok');
   },
-  "DELETE:/sales_ai_coach/v20180814/api/keyword_group/:id": (req, res)=>{
+  "POST:/sales_ai_coach/v20180814/api/keyword_group/:id/delete": (req, res)=>{
     res.status(204).send('success');
   },
-  "PUT:/sales_ai_coach/v20180814/api/keyword_group/change_use/:id": (req, res)=>{
+  "POST:/sales_ai_coach/v20180814/api/keyword_group/:id/change_use": (req, res)=>{
     res.status(201).send('ok');
   },
   "GET:/sales_ai_coach/v20180814/api/get_keyword_event_list": {
@@ -866,4 +983,346 @@ module.exports = {
       "id": 789
     },
   ],
+  "GET:/sales_ai_coach/v20181016/api/overview/work": {
+    counts: [30, 45, 23, 45, 80, 36, 50],
+    avgs: [3043, 584, 585, 3724, 494, 323, 445]
+  },
+  "GET:/sales_ai_coach/v20181016/api/overview/outline": {
+    count: 888,
+    duration: 1323791
+  },
+  "GET:/sales_ai_coach/v20181016/api/overview/stage_knowledge": {
+    stages: [
+      {
+        name: "开场白",
+        count: 35
+      },
+      {
+        name: "需求分析",
+        count: 80
+      },
+      {
+        name: "公司介绍",
+        count: 60
+      }
+    ],
+    knowledges: [
+      {
+        name: "开场白",
+        count: 35
+      },
+      {
+        name: "需求分析",
+        count: 80
+      },
+      {
+        name: "公司介绍",
+        count: 60
+      },
+      {
+        name: "开场白",
+        count: 35
+      },
+      {
+        name: "需求分析",
+        count: 80
+      },
+      {
+        name: "公司介绍",
+        count: 60
+      },
+      {
+        name: "开场白",
+        count: 35
+      },
+      {
+        name: "需求分析",
+        count: 80
+      },
+      {
+        name: "公司介绍",
+        count: 60
+      },
+      {
+        name: "公司介绍",
+        count: 60
+      }
+    ]
+  },
+  "GET:/sales_ai_coach/v20181016/api/overview/key_word": [
+    {
+      name: "开场白",
+      count: 35
+    },
+    {
+      name: "需求分析",
+      count: 80
+    },
+    {
+      name: "公司介绍",
+      count: 60
+    },
+    {
+      name: "开场白",
+      count: 35
+    },
+    {
+      name: "需求分析",
+      count: 80
+    },
+    {
+      name: "公司介绍公司介绍",
+      count: 60
+    }
+  ],
+  "GET:/sales_ai_coach/v20181016/api/overview/rate": [30, 45, 23, 45, 80, 36, 50],
+  "GET:/sales_ai_coach/v20181016/api/overview/knowledge": [],
+  "GET:/sales_ai_coach/renbao/api/conversation_config": {
+    "stages": [
+      {
+        "id": 0,
+        "name": "开场白",
+        "comment": "一段开场白",
+        "order": 0,
+        "ideas": [
+          {
+            "id": 0,
+            "name": "开场白1",
+            "comment": "一段开场白11",
+            "order": 0
+          },
+          {
+            "id": 1,
+            "name": "开场白2",
+            "comment": "一段开场白22",
+            "order": 2
+          },
+          {
+            "id": 2,
+            "name": "开场白3",
+            "comment": "一段开场白33",
+            "order": 4
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "结束语",
+        "comment": "一段结束语",
+        "order": 0,
+        "ideas": [
+          {
+            "id": 01,
+            "name": "结束语1",
+            "comment": "一段结束语11",
+            "order": 0
+          },
+          {
+            "id": 11,
+            "name": "结束语2",
+            "comment": "一段结束语22",
+            "order": 2
+          },
+          {
+            "id": 21,
+            "name": "结束语3",
+            "comment": "一段结束语33",
+            "order": 4
+          }
+        ]
+      }
+    ],
+    "knowledges": [
+      {
+        "title": "客户抱怨价格太贵",
+        "content": "客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵"
+      },
+      {
+        "title": "1客户抱怨价格太贵",
+        "content": "1客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵"
+      },
+      {
+        "title": "2客户抱怨价格太贵",
+        "content": "2客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵"
+      }
+    ],
+    "user_id": "user_id",
+    "annotation_config": {
+      "user_profile": {
+        "in_use": true,
+        "all_items": [ "name", "phone_number", "business_type" ],
+        "in_use_items": [ "name", "business_type" ]
+      }
+    }
+  },
+  "GET:/sales_ai_coach/renbao/api/search/knowledge": [
+    {
+      "title": "search客户抱怨价格太贵",
+      "content": "客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵"
+    },
+    {
+      "title": "1search客户抱怨价格太贵",
+      "content": "1客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵"
+    },
+    {
+      "title": "2search客户抱怨价格太贵",
+      "content": "2客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵客户抱怨价格太贵"
+    }
+  ],
+  "POST:/sales_ai_coach/renbao/api/user_profile/p1/change": (req, res)=>{
+    res.status(201).send('ok');
+  },
+  "POST:/sales_ai_coach/v20181016/api/user_profile/p2/change": (req, res)=>{
+    res.status(201).send('ok');
+  },
+  "GET:/sales_ai_coach/v20181030/api/overview/dashboard": {
+    "today_conversation": 210,
+    "yesterday_conversation": 210,
+    "today_keyword": 79,
+    "yesterday_keyword": 80,
+    "current_month_keyword": 1000,
+    "last_month_keyword": 50
+  },
+  "GET:/sales_ai_coach/v20181030/api/today_keyword_list": [
+    {
+      "create_timestamp": 45343,
+      "conversation_id": 0,
+      "speaker": 0,
+      "key_word": "敏感词1",
+      "sentence_id": 0
+    },
+    {
+      "create_timestamp": 343,
+      "conversation_id": 0,
+      "speaker": 0,
+      "key_word": "敏感词2",
+      "sentence_id": 1
+    },
+    {
+      "create_timestamp": 4524,
+      "conversation_id": 0,
+      "speaker": 1,
+      "key_word": "敏感词3",
+      "sentence_id": 2
+    },
+    {
+      "create_timestamp": 45,
+      "conversation_id": 0,
+      "speaker": 0,
+      "key_word": "敏感词4",
+      "sentence_id": 3
+    },
+    {
+      "create_timestamp": 123,
+      "conversation_id": 0,
+      "speaker": 0,
+      "key_word": "敏感词5",
+      "sentence_id": 4
+    },
+    {
+      "create_timestamp": 4245,
+      "conversation_id": 0,
+      "speaker": 1,
+      "key_word": "敏感词6",
+      "sentence_id": 5
+    },
+    {
+      "create_timestamp": 542,
+      "conversation_id": 0,
+      "speaker": 1,
+      "key_word": "敏感词7",
+      "sentence_id": 6
+    },
+    {
+      "create_timestamp": 943,
+      "conversation_id": 0,
+      "speaker": 0,
+      "key_word": "敏感词8",
+      "sentence_id": 7
+    },
+    {
+      "create_timestamp": 4528,
+      "conversation_id": 0,
+      "speaker": 0,
+      "key_word": "敏感词9",
+      "sentence_id": 8
+    },
+    {
+      "create_timestamp": 4543,
+      "conversation_id": 0,
+      "speaker": 1,
+      "key_word": "敏感词10",
+      "sentence_id": 9
+    },
+    {
+      "create_timestamp": 9934,
+      "conversation_id": 0,
+      "speaker": 0,
+      "key_word": "敏感词11",
+      "sentence_id": 10
+    },
+    {
+      "create_timestamp": 4523,
+      "conversation_id": 0,
+      "speaker": 1,
+      "key_word": "敏感词12",
+      "sentence_id": 11
+    }
+  ],
+  "GET:/sales_ai_coach/v20181030/api/overview/today_keyword": [
+    {
+      "name": "敏感词1",
+      "count": 20
+    },
+    {
+      "name": "敏感词2",
+      "count": 80
+    },
+    {
+      "name": "敏感词3",
+      "count": 50
+    },
+    {
+      "name": "敏感词4",
+      "count": 35
+    },
+    {
+      "name": "敏感词5",
+      "count": 38
+    },
+    {
+      "name": "敏感词6",
+      "count": 60
+    },
+    {
+      "name": "敏感词7",
+      "count": 50
+    },
+    {
+      "name": "敏感词8",
+      "count": 39
+    }
+  ],
+  "POST:/sales_ai_coach/v20181113/api/annotation/get": (req, res)=>{
+    res.status(201).send(
+      {
+        "user_profile": {
+          "in_use": true,
+          "all_items": [ "name", "phone_number", "business_type" ],
+          "in_use_items": [ "name", "business_type" ]
+        },
+        "sales_speed": {
+          "in_use": true,
+          "range": [ 50, 80 ]
+        },
+        "sales_talk_proportion": {
+          "in_use": false,
+          "range": [ 30, 60 ]
+        }
+      }
+    );
+  },
+  "POST:/sales_ai_coach/v20181113/api/annotation/change": (req, res)=>{
+    res.status(201).send("OK");
+  }
 }
